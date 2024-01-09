@@ -1,0 +1,44 @@
+<html>
+<head></head>
+<body>
+
+<input type="text" id="delElem" />
+<button>Delete Element</button>
+<div></div>
+
+<script>
+let carArr = ['ferrari','bmw','lamboghini','supra','nisan'];
+
+var divElem = document.querySelector('div');
+var delElem = document.getElementById('delElem');
+var delBtn = document.querySelector('button');
+var elemList = document.createElement('li');
+
+delBtn.addEventListener('click',()=>{
+
+var elemIndex = carArr.indexOf(delElem.value);
+
+console.log(elemIndex)
+
+carArr.splice(elemIndex,1);
+
+console.log(carArr)
+
+});
+
+var elemObj = '<ul>';
+
+carArr.forEach((curElem)=>{
+   elemObj = elemObj + `<li>${curElem}</li>`;
+});
+elemObj += '</ul>';
+
+divElem.innerHTML = elemObj;
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head></head>
+<body>
+
+<input type ="text" onkeyup="demo(this)" />
+
+<script>
+
+function demo(val){
+
+var onlyNum = isNaN(val.value)
+
+if(onlyNum === true){
+alert('Enter Your Correct No:')
+val.value='';
+}
+
+if(val.value.length == 11){
+alert('Thank You')
+}else{
+alert('Énter Valid No:')
+}
+
+}
+
+</script>
+</body>
+</html>

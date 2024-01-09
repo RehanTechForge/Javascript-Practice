@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    FIRST NUMBER<br>
+    <input type="text" id="v1"><br>
+    SECOND NUMBER<br>
+    <input type="text" id="v2">
+    <p>Result</p>
+    <input type="submit" value="+" onclick="calc(this)">
+    <input type="submit" onclick="calc(this)" value="-">
+    <input type="submit" onclick="calc(this)" value="*">
+    <input type="submit" onclick="calc(this)" value="/">
+    <script>
+        
+        var num1 = document.querySelector("#v1").value;
+        var num2 = document.querySelector("#v2").value;
+       
+
+        // res = "";
+        var calc = (calculator) => {
+            if (calculator.value == "+") {
+                res = num1+num2;
+                alert(calculator.value)
+            }else if (calculator.value == "-") {
+                res = num1-num2;
+            }else if (calculator.value == "*") {
+                res = num1*num2;
+            }else if (calculator.value == "/") {
+                res = num1/num2;
+            }else{
+                res = "PLease Select a Valid Button"
+            }
+
+        }
+
+    </script>
+</body>
+</html>

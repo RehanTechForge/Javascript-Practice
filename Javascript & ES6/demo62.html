@@ -1,0 +1,65 @@
+<html>
+<head></head>
+<style>
+h1{
+text-align:center;
+}
+#bimg{
+cursor:pointer;	
+margin:0px auto;
+display:block;
+width:400px;
+height:400px;
+border:20px groove lightgreen;
+}
+div{
+width:80%;
+margin:0px auto;
+text-align:center;
+margin-top:30px;
+}
+#simg{
+width:150px;
+height:150px;
+border:10px groove red;
+cursor:pointer;
+transition:all .5s linear;
+margin:0px 10px;
+}
+</style>
+<body>
+
+<h1>Image Gallery</h1>
+<hr />
+<img src="assets/images/img.jpeg" id="bimg">
+<div>
+<img onmouseover="demo(this)" onmouseleave="demo(this)" src="assets/images/img2.jpeg" id="simg">
+<img onmouseover="demo(this)" onmouseleave="demo(this)" src="assets/images/img3.jpeg" id="simg">
+<img onmouseover="demo(this)" onmouseleave="demo(this)" src="assets/images/img4.jpeg" id="simg">
+<img onmouseover="demo(this)" onmouseleave="demo(this)" src="assets/images/img5.jpeg" id="simg">
+</div>
+<script>
+
+function demo(val){
+var bimg = document.getElementById('bimg');
+var simg = document.getElementById('simg');
+if(val.src != bimg.src){
+bimg.src = val.src;
+val.style.border='10px groove lightgreen'
+val.style.scale='1.1';
+}else{
+bimg.src = 'assets/images/img.jpeg';
+val.style.border='10px groove red';
+val.style.scale='1';
+}
+}
+
+<!-- function demo1(val1){ -->
+<!-- var bimg = document.getElementById('bimg'); -->
+<!-- val1.src = bimg.src='assets/images/baby.jpeg' -->
+<!-- } -->
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      list-style: none;
+    }
+
+    .navbar {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+    }
+    .navbar>.navbar-container>.logo>a>img{
+      width: 90px;
+    }
+    .navbar-container{
+      display: flex;
+      justify-content: space-around;
+    }
+    .navbar-container>ul{
+      display: flex;
+      align-items: center;
+    }
+    .navbar-container>ul>li{
+      list-style: none;
+      margin: 0px 10px;
+    }
+    .navbar-container>ul>li>a{
+      text-decoration: none;
+      text-transform: capitalize;
+      color: white;
+      margin: 15px 0px;
+      display: block;
+    }
+    .form{
+      display: flex;
+    align-items: center;
+    }
+    .form>form>input,button{
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .burger{
+      position: absolute;
+      right: 5%;
+      top: 4%;
+      padding: 3px;
+      border: 1px solid white;
+      display: none;
+    }
+    .line{
+      width: 33px;
+      height: 3px;
+      background-color: white;
+      margin: 5px 2px;
+    }
+    @media only screen and (max-width:700px){
+      .navbar{
+        height: 60px;
+        transition: all .3s ease-in-out;
+      }
+      .navbar-container{
+        opacity: 0;
+        
+      }
+      .navbar-container>ul>li>a{
+        color: white;
+      }
+      .form{
+        justify-content: center;
+        
+      }
+      form{
+        display: flex;
+    flex-direction: column;
+      }
+      form>button{
+        width: 64px;
+    margin: 2px auto;
+      }
+      .nav-links{
+        flex-direction: column;
+      }
+      .nav-links>li{
+        
+      }
+      .navbar-container{
+        flex-direction: column;
+      }
+      .logo{
+        display: flex;
+    justify-content: center;
+      }
+      .burger{
+        display: block;
+      }
+      .v_resp{
+        opacity: 1;
+      }
+      .h_resp{
+        height: 400px;
+      }
+      
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <a href="#">
+          <img src="images/logo.png" alt="">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="form">
+        <form action="">
+          <input type="text" placeholder="Search">
+          <button>Search</button>
+        </form>
+      </div>
+    </div>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+
+  <script>
+
+    const hamBurger = document.querySelector('.burger');
+    const heightResp = document.querySelector('.navbar');
+    const opacity = document.querySelector('.navbar-container')
+
+    hamBurger.addEventListener('click', () => {
+      opacity.classList.toggle('v_resp')
+      heightResp.classList.toggle('h_resp')
+    });
+
+
+
+  </script>
+</body>
+
+</html>

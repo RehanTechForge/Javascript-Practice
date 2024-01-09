@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+
+	<p class="p1"></p>
+<script type="text/javascript">
+		
+		var year=2022;
+		if (year % 4 === 0) {
+			if (year % 100 === 0) {
+				if (year % 400 === 0) {
+					document.write("the year " + year + " was a leap year")
+				}else{
+					document.write("the year " + year + " was not a leap year")
+				}
+			}else{
+				document.write("the year " + year + " was a leap year")
+			}
+		}else{
+			document.write("the year " + year + " was not a leap year")
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+<head></head>
+<body>
+
+<input type="password" placeholder="Enter Your Password" />
+<input type="button" class="btn" value="SHOW" onclick="demo()" />
+
+<script>
+var obj = document.querySelector("input");
+var btn = document.querySelector(".btn");
+const demo=()=>{
+
+if(btn.value=="SHOW"){
+btn.value="HIDE";
+obj.setAttribute("type","text");
+}else{
+btn.value="SHOW";
+obj.setAttribute("type","password");
+}
+
+}
+</script>
+</body>
+</html>

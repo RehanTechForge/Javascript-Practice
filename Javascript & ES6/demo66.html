@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        nav{
+            background-color: antiquewhite  ;
+        }
+        ul{
+            display: flex;
+            gap: 20px;
+            padding: 10px 100px;
+            justify-content: center;
+            align-items: center;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            text-transform: capitalize;
+        }
+        .burger{
+            position: fixed;
+            top: 3%;
+            right: 5%;
+            padding: 3px 4px;
+            border: 1px solid black;
+            opacity: 0;
+        }
+        .line{
+            margin-bottom: 3px;
+            width: 13px;
+            height: 2px;
+            background-color: black;
+        }
+        
+        @media (max-width:670px) {
+            .burger{
+                opacity: 1;
+            }
+            nav{
+                display: none;
+            }
+            .hea{
+            height: 100vh;
+    width: 100vw;
+    background: aliceblue;
+        }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">gallery</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">testimionials</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="burger" onclick="demo()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <script>
+        function demo(){
+            document.querySelector('header').classList.add('hea')
+            document.querySelector('nav').style.display='block';
+            document.querySelector('ul').style.flexDirection='column';
+            //document.querySelector('header').classList.remove('hea')
+        }
+    </script>
+</body>
+</html>

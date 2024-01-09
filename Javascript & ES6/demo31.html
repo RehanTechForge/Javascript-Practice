@@ -1,0 +1,108 @@
+<html>
+<head></head>
+<style>
+body{
+background-color:FAF3F0;
+}
+.parent{
+width:30vw;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+margin:0px auto;
+background-color:F1F0E8;
+text-align:center;
+padding:10px 15px;
+}
+button{
+width:14.8vw;
+padding:10px 0px;
+background-color:black;
+color:white;
+outline:none;
+cursor:pointer;
+border:none;
+border-radius:10px;
+transition:all .2s linear;
+margin-bottom:10px;
+}
+button:hover{
+color:black;
+background-color:white;
+}
+span{
+display:block;
+text-align:left;
+}
+.log{
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 10px 0px;
+}
+.firstChild,.lastChild{
+display:none;
+}
+</style>
+<body>
+
+<div class="parent">
+<button onclick="demo()" id="login">Log In</button>
+<button onclick="demo1()" id="register">Register</button>
+<div class="firstChild">
+
+<span>Name:</span>
+<input class="log" type="text" placeholder="Enter Your Name">
+<span>Password:</span>
+<input class="log" type="text" placeholder="Enter Your Password">
+
+<button>Log In</button>
+
+</div>
+<div class="lastChild">
+
+<span>Name:</span>
+<input class="log" type="text" placeholder="Enter Your Name">
+<span>Email:</span>
+<input class="log" type="text" placeholder="Enter Your Email">
+<span>Password:</span>
+<input class="log" type="text" placeholder="Enter Your Password">
+<span>Confirm Password:</span>
+<input class="log" type="text" placeholder="Enter Your Confirm Password">
+
+<button>Register</button>
+
+</div>
+</div>
+
+<script>
+
+var firstObj = document.querySelector(".firstChild");
+var secondObj = document.querySelector(".lastChild");
+var firstBtn = document.getElementById("login");
+var secondBtn = document.getElementById("register");
+
+function demo(){
+
+if(firstBtn.innerHTML=="Log In"){
+firstObj.style.display="block"
+secondObj.style.display="none"
+}else{
+firstObj.style.display="none"
+secondObj.style.display="block"
+}
+}
+
+function demo1(){
+
+if(secondBtn.innerHTML=="Register"){
+secondObj.style.display="block"
+firstObj.style.display="none"
+}else{
+secondObj.style.display="none"
+firstObj.style.display="block"
+}
+}
+
+</script>
+
+</body>
+</html>

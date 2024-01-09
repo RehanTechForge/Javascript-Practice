@@ -1,0 +1,25 @@
+<script>
+
+var userInput = prompt("Enter Your City");
+
+var cityArr = ["Karachi","Lahore","Peshawar","Multan","Quetta"]
+var match = false
+var upperCase = userInput.slice(0,1).toUpperCase();
+var lowerCase = userInput.slice(1).toLowerCase();
+
+var capitalize = upperCase+lowerCase;
+//console.log(upperCase+lowerCase);
+
+for(var i = 0; i<cityArr.length;i++){
+if(capitalize == cityArr[i]){
+match=true
+alert("Data Found")
+break
+}
+}
+
+if(match == false){
+alert("Data Not Found");
+}
+
+</script>

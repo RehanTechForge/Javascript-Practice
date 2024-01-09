@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		h1{
+			display: none;
+			opacity: 0;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1 class="h" selected>PLEASE SELECT YOUR LANGUAGE</h1>
+	<h1 class="h">HTML</h1>
+	<h1 class="h">CSS</h1>
+	<h1 class="h">CSS 3</h1>
+	<h1 class="h">JAVASCRIPT</h1>
+	<h1 class="h">JQUERY</h1>
+	<h1 class="h">MERN STACK</h1>
+	<h1 class="h">MEAN STACK</h1>
+	<p></p>
+	<input type="submit" value="submit" onclick="demo()" name="">
+
+	<script type="text/javascript">
+		
+		var demo = ()=>{
+
+				var head = document.getElementsByClassName("h");
+				r = "<select>"
+				for(index = 0;index<head.length;index++){
+					//alert(head[index].innerHTML)
+					r+="<option>"+ head[index].innerHTML +"</option>"
+					document.querySelector("p").innerHTML=r;
+				}
+				r+="</select>";
+
+		}
+
+
+	</script>
+
+</body>
+</html>

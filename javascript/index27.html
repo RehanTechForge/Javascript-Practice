@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        var myArr = [
+            {
+                firstName: "Muhammad",
+                lastName: "Rehan",
+                class: "SSc Part II",
+                address: "House no 551,Sector no 48/D, Korangi no 2",
+                city: "karachi",
+                jobTitle: "Frontend Developer",
+                Salary: 20000,
+                pic:"001.jpg"
+            },
+            {
+                firstName: "Usman",
+                lastName: "Khan",
+                class: "SSc Part I",
+                address: "House no 51,Sector no 48/A, Korangi no 4",
+                city: "karachi",
+                jobTitle: "Backend Developer",
+                Salary: 15000,
+                pic:"002.jpg"
+            },
+            {
+                firstName: "Muhammad",
+                lastName: "Shahroz",
+                class: "SSc Part I",
+                address: "House no 55,Sector no 45/D, Korangi no 1",
+                city: "karachi",
+                jobTitle: "Frontend Developer",
+                Salary: 12000,
+                pic:"003.jpg"
+            },
+            {
+                firstName: "Rao",
+                lastName: "Asghar",
+                class: "SSc Part II",
+                address: "House no 451,Sector no 48/F, Korangi no 3",
+                city: "karachi",
+                jobTitle: "Frontend Developer",
+                Salary: 20000,
+                pic:"004.jpg"
+            },
+            {
+                firstName: "Subhan",
+                lastName: "Khan",
+                class: "SSc Part II",
+                address: "House no 5,Sector no 48/D, Korangi no 4",
+                city: "karachi",
+                jobTitle: "Frontend Developer",
+                Salary: 20000,
+                pic:"005.jpeg"
+            },
+            {
+                firstName: "Akbar",
+                lastName: "ali",
+                class: "SSc Part II",
+                address: "House no 751,Sector no 78/D, Korangi no 6",
+                city: "karachi",
+                jobTitle: "Frontend Developer",
+                Salary: 20000,
+                pic:"006.jpg"
+            },
+        ];
+
+            arrResult= `<table border='1' cell-spacing='7' cellpadding='7' style='margin:0px auto;'>
+                <tr>
+                    <td> First Name </td>
+                    <td> Last Name </td>
+                    <td> Class </td>
+                    <td> Address </td>
+                    <td> City </td>
+                    <td> Job Title </td>
+                    <td> Salary </td>
+                    <td> User Image </td>
+                </tr>
+            `;
+
+        myArr.forEach((userData,dataIndex,Array)=>{
+            arrResult+=`
+                <tr>
+                    <td>${userData.firstName}</td>
+                    <td>${userData.lastName}</td>
+                    <td>${userData.class}</td>
+                    <td>${userData.address}</td>
+                    <td>${userData.city}</td>
+                    <td>${userData.jobTitle}</td>
+                    <td>${userData.Salary}</td>
+                    <td><img src='images/${userData.pic}' height='50px' width='100px' /></td>
+                </tr>
+            `
+        });
+        arrResult+="</table>";
+
+        document.write(arrResult);
+
+
+    </script>
+</body>
+</html>

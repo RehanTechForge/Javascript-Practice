@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        #Bimg{
+            height: auto;
+            width: 600px;
+            border: 10px groove yellowgreen;
+            display: block;
+            height: 400px;
+        }
+        #Simg{
+            width: 100px;
+            height: 100px;
+            margin: 20px 5px;
+            border: 10px groove yellowgreen;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 style="text-align:center;">Image Gallery </h1>
+    <hr>
+
+    <center>
+        <img src="images/001.jpg" id="Bimg" alt="">
+        <img src="images/002.jpg" onmouseout="imgDefault(this)" onmouseover="imgChange(this)" id="Simg" alt="">
+        <img src="images/003.jpg" onmouseout="imgDefault(this)" onmouseover="imgChange(this)" id="Simg" alt="">
+        <img src="images/004.jpg" onmouseout="imgDefault(this)" onmouseover="imgChange(this)" id="Simg" alt="">
+        <img src="images/005.jpeg" onmouseout="imgDefault(this)" onmouseover="imgChange(this)" id="Simg" alt="">
+        <img src="images/006.jpg" onmouseout="imgDefault(this)" onmouseover="imgChange(this)" id="Simg" alt="">
+        <img src="images/007.jpg" onmouseout="imgDefault(this)" onmouseover="imgChange(this)" id="Simg" alt="">
+    </center>
+    <script>
+        const imgChange=(Image)=>{
+            document.querySelector("#Bimg").src=Image.src;
+            Image.style.border="10px groove red";
+            Image.style.transform="scale(1.1)";
+            Image.style.transition="all ease-in-out 0.5s";
+        }
+        const imgDefault=(ImgDefault)=>{
+            document.querySelector("#Bimg").src="images/001.jpg";
+            ImgDefault.style.border="10px groove yellowgreen";
+            ImgDefault.style.transform="scale(1)";
+            Image.style.transition="all ease-in-out 0.5s";
+        }
+    </script>
+</body>
+</html>

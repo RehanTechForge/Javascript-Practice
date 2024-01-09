@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        form{
+            width: 50%;
+            margin: 10px auto;
+        }
+        form input{
+            width: 80%;
+            padding: 5px;
+        }
+        form button{
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .search-results{
+            display: grid;
+            width: 80%;
+            margin: 0px auto;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: 100%;
+            aspect-ratio: 1;
+            border: 10px groove grey;
+            cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+      <input type="text" placeholder="Search Images Here.." />
+      <button>Search</button>
+
+    <div class="search-results">
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

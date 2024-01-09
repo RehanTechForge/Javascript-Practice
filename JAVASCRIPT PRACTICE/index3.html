@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+    
+    </style>
+</head>
+<body>
+
+    <h1>function to add a two number in javascript  </h1>
+    
+    <input type="text" id="v1">
+    <input type="text" id="v2">
+    <p id="p1"></p>
+    <button onclick="demo()">ADD</button>
+    <script>
+        function demo() {
+             var a=document.getElementById("v1").value
+             var b=document.getElementById("v2").value
+            
+            var sum = Number(a)+Number(b)
+
+            var c=document.getElementById("p1")
+            c.innerText=sum
+            c.style.color='green'
+            c.style.backgroundColor='black'
+            c.style.height="50px"
+            c.style.width="100px"
+            c.style.display="flex"
+            c.style.alignItems="center"
+            c.style.justifyContent="center"
+            
+        }
+    </script>
+</body>
+</html>

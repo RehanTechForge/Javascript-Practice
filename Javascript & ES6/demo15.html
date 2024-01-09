@@ -1,0 +1,29 @@
+<html>
+<head></head>
+<style>
+img{
+height:400px;
+width:400px;
+border:10px dotted black;}
+</style>
+<body>
+
+<img src="assets/images/img.jpeg" id="im" />
+<img src="assets/images/img1.jpeg" id="im1" /><br />
+<button onclick="demo()">Swap Image</button>
+
+<script>
+const demo=()=>{
+var img = document.querySelector("#im");
+var img1 = document.querySelector("#im1");
+
+var path1 = img.src;
+var path2 = img1.src;
+
+img.src=path2;
+img1.src=path1;
+
+}
+</script>
+</body>
+</html>

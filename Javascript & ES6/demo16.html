@@ -1,0 +1,23 @@
+<html>
+<head></head>
+<body>
+
+<img src="assets/images/pic_bulboff.gif" onclick="changeImage()" />
+<p>Turn Bulb Light On/Off...</p>
+
+<script>
+
+const changeImage=()=>{
+
+var image = document.querySelector("img");
+if(image.src.match("bulbon")){
+image.src="assets/images/pic_bulboff.gif"
+}else{
+image.src="assets/images/pic_bulbon.gif"
+}
+
+}
+
+</script>
+</body>
+</html>

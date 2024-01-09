@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		 body{
+			background-color: black;
+			color: white;
+		}
+		.bx{
+			background-color: skyblue;
+			height: 300px;
+			width: 600px;
+			margin: 250px auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 10px;
+		}
+		.a{
+			background-color: maroon;
+			float: left;
+			width: 100px;
+			margin: 0px 10px;
+			font-size: 45px;
+			padding: 20px 20px;
+			text-align: center;
+			border: 10px groove red;
+			box-shadow: 0px 0px 10px 10px black inset;
+			font-weight: bolder;
+		}
+		span{
+			font-size: 15px;
+		} 
+	</style>
+	
+</head>
+<body>
+
+	<div class="bx">
+		<div class="a" id="hh">hh <span> </span> </div>
+		<div class="a" id="mm">mm</div>
+		<div class="a" id="ss">ss</div>
+	</div>
+
+	
+<script type="text/javascript">
+		
+
+	
+	setInterval( () => {
+	d = new Date();
+	document.querySelector("#hh").innerHTML = d.getHours();
+	document.querySelector("#mm").innerHTML = d.getMinutes();
+	document.querySelector("#ss").innerHTML = d.getSeconds();
+	document.querySelector("span").innerHTML="pm";
+	}
+	,1000);
+	
+
+</script>
+
+</body>
+</html>

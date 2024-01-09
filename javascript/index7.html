@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+    h1{
+        background-color: red;
+        border: 5px groove green;
+        color: white;
+    }
+    #abc{
+        font-size: 50px;
+    }
+    </style>
+</head>
+<body>
+
+    <h1 class="head" id="abc">HELLO WORLD</h1>
+    <h1 class="head1">PAKISTAN ZINDABAD</h1>
+    <button onclick="demo()">TEXT SWAP</button>
+    <script>
+        
+        const demo = () =>{
+            const x1 = document.querySelector(".head");
+            const x2 = document.querySelector(".head1");
+
+            const path = x1.innerHTML;
+            const path1 = x2.innerHTML;
+
+            x1.innerHTML = path1;
+            x2.innerHTML = path;
+
+            x1.hasAttribute("id");
+            v1 = x1.innerHTML;
+            alert(v1);
+
+        }
+    
+    </script>
+</body>
+</html>

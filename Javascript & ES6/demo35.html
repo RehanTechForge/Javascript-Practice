@@ -1,0 +1,19 @@
+<html>
+<head></head>
+<body>
+<h1>Table Genrator</h1><hr />
+Table:
+<input type="text" /><br />
+<button onclick="demo()">Generate</button>
+
+<script>
+let demo=()=>{
+let inputObj = parseInt(document.querySelector("input").value);
+
+for(let i = 1;i <= 10; i++){
+console.log(inputObj+" X "+i+" = "+(inputObj*i)+"<br />")
+}
+}
+</script>
+</body>
+</html>

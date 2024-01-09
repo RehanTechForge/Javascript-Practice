@@ -1,0 +1,22 @@
+<html>
+<head></head>
+<body>
+
+<input type="number" onkeyup="demo(this)" />
+<p></p>
+
+<button>Click</button>
+
+<script>
+document.querySelector('button').style.display='none';
+function demo(val){
+if(val.value.length == 6){
+document.querySelector('p').innerHTML='Valid PinCode'
+document.querySelector('button').style.display='block';
+}else{
+document.querySelector('p').innerHTML='Invalid PinCode'
+}
+}
+</script>
+</body>
+</html>

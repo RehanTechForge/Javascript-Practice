@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        #video{
+           width: 600px;
+           border: 10px groove red;
+        }
+        video{
+            width: 200px;
+            border: 10px groove red;
+            margin: 10px 15px;
+        }
+        .bx{
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            display: none;
+        }
+        .innerbx{
+            background: white;
+            border-radius: 10px;
+            width: 650px;
+            padding: 10px;
+            margin: 100px auto;
+        }
+        .Bvideo{
+           
+        }
+    </style>
+</head>
+<body>
+    
+    <center>
+        <h1>Video Gallery</h1>
+        <hr>
+        
+        <video src="video/song.mp4" onclick="demo(this)" class="Svideo" controls=""></video>
+        <video src="video/song.mp4" onclick="demo(this)" class="Svideo" controls=""></video>
+        <video src="video/song.mp4" onclick="demo(this)" class="Svideo" controls=""></video>
+        <video src="video/song.mp4" onclick="demo(this)" class="Svideo" controls=""></video><br>
+        <video src="video/song.mp4" onclick="demo(this)" class="Svideo" controls=""></video>
+        <video src="video/song.mp4" onclick="demo(this)" class="Svideo" controls=""></video>
+        <video src="video/song.mp4" onclick="demo(this)" class="Svideo" controls=""></video>
+        <video src="video/song.mp4" onclick="demo(this)" class="Svideo" controls=""></video><br>
+        
+    </center>
+
+    <div class="bx">
+        <div class="innerbx">
+            <center>
+                <h2>Video Gallery <a href="index17.html" style="float:right;"> <b> X </b> </a> </h2>
+            </center>
+            <center>
+                <video class="Bvideo" id="video" src="" controls=""></video>
+            </center>
+        </div>
+    </div>
+
+
+    <script>
+        
+        var demo = (x) =>{
+            document.querySelector(".bx").style.display="block";
+            document.querySelector(".Bvideo").src=x.src;
+        }
+
+    </script>
+</body>
+</html>

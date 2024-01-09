@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		
+		function add(){
+			var value1 = document.getElementById("first").value;
+			var value2 = document.getElementById("second").value;
+			
+			var res = parseInt(value1)*parseInt(value2);
+
+			var fin = document.getElementById("result").innerHTML="<span style='font-size:25px;color:green;'>"+res+"</span>";
+
+			if (fin=res) {
+				alert("data stored");
+			}else{
+				alert("data not stored");
+			}
+
+		}
+
+		function add1(){
+			var value1 = document.getElementById("first").value;
+			var value2 = document.getElementById("second").value;
+			
+			var res = parseInt(value1)/parseInt(value2);
+
+			var fin = document.getElementById("result").innerHTML="<span style='font-size:25px;color:green;'>"+res+"</span>";
+
+			if (fin=res) {
+				alert("data stored");
+			}else{
+				alert("data not stored");
+			}
+
+		}
+
+	</script>
+</head>
+<body>
+
+	<input type="text" id="first" name="">
+	<input type="text" id="second" name="">
+	<p id="result"></p>
+	<button onclick="add()">get</button>
+	<button onclick="add1()">get</button>
+</body>
+</html>

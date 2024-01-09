@@ -1,0 +1,27 @@
+<html>
+<head></head>
+<body>
+
+<input type="text" id="txt1" value="Muhammad" />
+<input type="text" id="txt2" value="Rehan" />
+<button onclick="demo()">Swap text</button>
+
+<script>
+
+const demo=()=>{
+
+var txt1 = document.getElementById("txt1");
+var txt2 = document.getElementById("txt2");
+
+var path1 = txt1.value;
+var path2 = txt2.value;
+
+txt1.value=path2;
+txt2.value=path1;
+
+}
+
+</script>
+
+</body>
+</html>

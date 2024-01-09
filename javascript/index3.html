@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		img{
+			width: 200px;
+			height: 200px;
+			border: 8px groove red;
+		}
+	</style>
+</head>
+<body>
+
+	<img id="img1" src="images/001.jpg">
+	<img id="img2" src="images/002.jpg">
+	<img id="img3" src="images/003.jpg"><br/>
+	<button onclick="demo()">IMAGE SWAP</button>
+	<script type="text/javascript">
+		
+		const demo = () =>{
+		const path1 = document.querySelector("#img1");
+		const path2 = document.querySelector("#img2");
+		const path3 = document.querySelector("#img3");
+
+		const swap1 = path1.src;
+		const swap2 = path2.src;
+		const swap3 = path3.src;
+
+		path1.src = swap2;
+		path2.src = swap3;
+		path3.src = swap1;
+		path1.style.border='8px groove green'
+		path2.style.border='8px groove green'
+		path3.style.border='8px groove green'
+		setInterval(demo,3000);
+		}
+
+	</script>
+
+</body>
+</html>

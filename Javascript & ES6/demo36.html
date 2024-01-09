@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+<h1>Table Genrator</h1><hr />
+Table:
+<input type="text" /><br />
+Start No:
+<input id="sn" type="text" /><br />
+End No:
+<input id="en" type="text" /><br />
+<button onclick="demo()">Generate</button>
+
+<script>
+let demo=()=>{
+let inputObj = parseInt(document.querySelector("input").value);
+var startNo = parseInt(document.getElementById("sn").value);
+var endNo = parseInt(document.getElementById("en").value);
+
+if(startNo>endNo){
+alert("Invalid")
+}else{
+
+for(startNo;startNo<=endNo;startNo++){
+document.write(inputObj+" X "+startNo+" = "+inputObj*startNo+"<br />")
+}
+
+}
+
+}
+</script>
+</body>
+</html>

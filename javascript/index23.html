@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			background: url("images/tal.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.box{
+			width: 500px;
+			background: rgba(0,0,0,0.3);
+			box-shadow: 0px 0px 30px 3px rgba(0,0,0,0.5) inset,0px 0px 30px 3px black,0px 0px 60px 3px white;
+			border-radius: 10px;
+			margin: 150px auto;
+			min-height: 350px;
+			padding: 20px 10px;
+		}
+		p:nth-child(1){
+			padding: 15px 10px;
+			font-size: 30px;
+			text-align: center;
+			border: 5px groove grey;
+		}
+		p:nth-child(2){
+
+		}
+		img{
+			height: 44px;
+    float: right;
+    cursor: pointer;
+		}
+		.box>input{
+			width: 100%;
+			box-sizing: border-box;
+			background: rgba(0,0,0,0.3);
+			box-shadow: 0px 0px 30px 3px rgba(0,0,0,0.5) inset,0px 0px 30px 3px black,0px 0px 60px 3px white;
+			outline: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+		}
+		.box>input::placeholder{
+			color:blanchedalmond;
+		}
+
+	</style>
+</head>
+<body onload="myCaptcha()">
+
+	<div class="box">
+		
+		<p><del class="de"></del>
+			<img onclick="myCaptcha()" src="images/reload.png">
+		</p>
+		<input type="text" placeholder="Please Enter Your Captcha Code" name="">
+		<p class="va"></p>
+		<center>
+		<button onclick="mybtn()">Check Captcha</button>
+		</center>
+	</div>
+
+	<script type="text/javascript">
+		
+
+			var myCaptcha = () =>{
+
+		var str="aCDEJPb#$%^hijkstuvwx45fgyzABQRSTUVoplWXYZ01mHIqrFGKLMNO23n89!@&67cde*"
+
+		var len = str.length
+
+				captcha = "";
+
+				for(var i=0;i<=5;i++){
+				var rIndex = Math.floor(Math.random()*7);
+				captcha = captcha+str[rIndex]
+				}
+				document.querySelector('.de').innerHTML=captcha;
+			}
+			var mybtn = () =>{
+				
+				var input = document.querySelector('input');
+				
+				if (input.value == captcha) {
+					document.querySelector('.va').innerHTML="VALID CAPTCHA";
+					document.querySelector('.va').style.color="green";
+					document.querySelector('.va').style.textAlign="center";
+					document.querySelector('.va').style.fontSize="30px";
+				} else {
+					document.querySelector('.va').innerHTML="INVALID CAPTCHA";
+					document.querySelector('.va').style.color="red";
+					document.querySelector('.va').style.textAlign="center";
+					document.querySelector('.va').style.fontSize="30px";
+				}
+			}
+			
+
+	</script>
+
+</body>
+</html>

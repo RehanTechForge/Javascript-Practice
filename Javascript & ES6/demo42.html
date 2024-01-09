@@ -1,0 +1,37 @@
+<html>
+<head></head>
+<body>
+<input type="text" />
+<button onclick="demo()">Search Data</button>
+</body>
+<script>
+
+//console.log(capitalize)
+function demo(){
+var myCityArr = ["Karachi","Lahore","Peshawar","Islamabad","Quetta","Muree"]
+var inputObj = document.querySelector("input").value;
+var flag = false;
+//var inputVal = inputObj.value;
+var upperCase = inputObj.slice(0,1).toUpperCase();
+var lowerCase = inputObj.slice(1).toLowerCase();
+var capitalize = upperCase+lowerCase;
+//alert(inputObj.value)
+
+for(var i=0;i<myCityArr.length;i++){
+
+if(capitalize == myCityArr[i]){
+alert("Data Found...")
+flag = true;
+break;
+}
+
+}
+
+if(flag == false){
+alert("Data Not Found..");
+}
+
+}
+
+</script>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        header{
+            background-color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+        }
+        ul{
+            display: inline-flex;
+            gap: 15 px;
+            & li{
+                list-style: none;
+                margin: 0px 20px;
+                & a{
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    color: white;
+                    background-color: black;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                }
+            }
+        }
+        .burger{
+            border: 2px solid white;
+            position: absolute;
+            top: 5%;
+            cursor: pointer;
+            display: none;
+            right: 5%;
+            padding: 5px 5px;
+        }
+        .line{
+            width: 13px;
+            height: 2px;
+            margin: 2px 0px;
+            background-color: wheat;
+        }
+        .modal{
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .modal .modal-side{
+            height: 100vh;
+            background-color: white;
+            width: 400px;
+            & span{
+                font-size: 50px;
+            }
+        }
+        @media (max-width:940px) {
+            nav{
+                display: none;
+            }
+            .burger{
+                display: block;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="commom">home</a></li>
+                <li><a href="#" class="commom">about us</a></li>
+                <li><a href="#" class="commom">services</a></li>
+                <li><a href="#" class="commom">testimonials</a></li>
+                <li><a href="#" class="commom">contact us</a></li>
+                <li><a href="#" class="commom">gallery</a></li>
+                <li><a href="#" class="commom">registration</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="burger" onclick="demo(this)">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-side">
+            <span>X</span>
+        </div>
+    </div>
+
+    <script>
+        function demo(val){
+            
+        }
+    </script>
+</body>
+</html>

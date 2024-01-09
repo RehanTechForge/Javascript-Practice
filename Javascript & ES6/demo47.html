@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .fimg{
+            width: 500px;
+    border: 10px groove red;
+    height: 300px;
+        }
+        .oimg{
+            width: 150px;
+            aspect-ratio: 1;
+            border: 10px groove red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1>IMAGE GALLERY</h1>
+    </div>
+    
+
+    <div>
+        <img src="assets/images/img1.jpeg" class="fimg" alt="">
+    </div>
+    <div>
+        <img src="assets/images/img2.jpeg" class="oimg" onmouseover="demo(firstObj)" id="one" alt="">
+        <img src="assets/images/img3.jpeg" class="oimg" onmouseover="demo(twoObj)" id="two" alt="">
+        <img src="assets/images/img4.jpeg" class="oimg" onmouseover="demo(threeObj)" id="three" alt="">
+        <img src="assets/images/img.jpeg" class="oimg" onmouseover="demo(fourObj)" id="four" alt="">
+    </div>
+
+    <script>
+        var mainObj = document.querySelector('fimg');
+        var firstObj = document.getElementById('one');
+        var twoObj = document.getElementById('two');
+        var threeObj = document.getElementById('three');
+        var fourObj = document.getElementById('four');
+
+        function demo(val){
+            var mainObj = document.querySelector('fimg');
+        var firstObj = document.getElementById('one');
+        var twoObj = document.getElementById('two');
+        var threeObj = document.getElementById('three');
+        var fourObj = document.getElementById('four');
+            //console.log(val)
+            mainObj.src=firstObj;
+        }
+    </script>
+</body>
+</html>

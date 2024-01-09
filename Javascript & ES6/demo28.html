@@ -1,0 +1,42 @@
+<html>
+<head></head>
+<style>
+img{
+height:400px;
+width:600px;
+border:10px double red;
+}
+</style>
+
+<body onload="calling()">
+
+<center>
+<h1>Image Changer</h1><hr />
+<img id="im" src="assets/images/img.jpeg" alt="Flower" />
+</center>
+
+<script>
+
+let myArr = ["img1.jpeg","img2.jpeg","img3.jpeg","img4.jpeg","img5.jpeg","img6.jpeg","img7.jpeg"];
+
+let myBorder = ["maroon","brown","black","green","purple","skyblue","aqua"]
+
+var imgObj = document.querySelector("img");
+i=0;
+let slider=()=>{
+imgObj.src="assets/images/"+myArr[i];
+imgObj.style.border="10px groove "+myBorder[i]
+i++;
+if(i==myArr.length){
+i=0
+}
+}
+
+let calling=()=>{
+setInterval("slider()",2000)
+}
+
+</script>
+
+</body>
+</html>

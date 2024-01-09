@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<input type="password" value="admin" />
+	<button onclick="demo()" id="btn">SHOW</button>
+<script type="text/javascript">
+	
+	const demo = () =>{
+
+		const v1 = document.querySelector("input");
+		const v2 = document.querySelector("button");
+
+		path1 = v2.innerText;
+		const path = v1.type;
+
+		if (path1 == "SHOW") {
+			v2.innerText = "HIDE";
+			v1.type = "text";
+		}else{
+			v2.innerText = "SHOW";
+			v1.type = "password";
+		}
+
+	}
+
+</script>
+</body>
+</html>

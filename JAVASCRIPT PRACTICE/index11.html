@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        img{
+            height: 50px;
+            border: 1px solid black;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <img src="assets/images/1.jpg" id="im1" alt="">
+    <img src="assets/images/2.jpg" id="im2" alt="">
+    <img src="assets/images/3.jpg" id="im3" alt="">
+    <img src="assets/images/4.jpg" id="im4" alt="">
+    <img src="assets/images/5.jpg" id="im5" alt="">
+    <img src="assets/images/6.jpg" id="im6" alt="">
+    <img src="assets/images/7.jpg" id="im7" alt="">
+    <img src="assets/images/8.jpg" id="im8" alt="">
+    <img src="assets/images/9.jpg" id="im9" alt="">
+    <img src="assets/images/10.jpg" id="im10" alt="">
+    <img src="assets/images/11.jpg" id="im11" alt="">
+    <img src="assets/images/12.jpg" id="im12" alt="">
+    <img src="assets/images/13.jpg" id="im13" alt="">
+    <img src="assets/images/14.jpg" id="im14" alt="">
+    <img src="assets/images/15.jpg" id="im15" alt="">
+    <img src="assets/images/16.jpg" id="im16" alt="">
+    <img src="assets/images/17.jpg" id="im17" alt="">
+    <img src="assets/images/18.jpg" id="im18" alt="">
+    <img src="assets/images/19.jpg" id="im19" alt="">
+    <img src="assets/images/20.jpg" id="im20" alt="">
+
+    <button onclick="demo1()">image swap</button>
+
+    <script>
+        function demo() {
+            var img1=document.getElementById("im1")
+            var img2=document.getElementById("im2")
+            var img3=document.getElementById("im3")
+            var img4=document.getElementById("im4")
+            var img5=document.getElementById("im5")
+            var img6=document.getElementById("im6")
+            var img7=document.getElementById("im7")
+            var img8=document.getElementById("im8")
+            var img9=document.getElementById("im9")
+            var img10=document.getElementById("im10")
+            var img11=document.getElementById("im11")
+            var img12=document.getElementById("im12")
+            var img13=document.getElementById("im13")
+            var img14=document.getElementById("im14")
+            var img15=document.getElementById("im15")
+            var img16=document.getElementById("im16")
+            var img17=document.getElementById("im17")
+            var img18=document.getElementById("im18")
+            var img19=document.getElementById("im19")
+            var img20=document.getElementById("im20")
+
+            var path1=img1.src
+            var path2=img2.src
+            var path3=img3.src
+            var path4=img4.src
+            var path5=img5.src
+            var path6=img6.src
+            var path7=img7.src
+            var path8=img8.src
+            var path9=img9.src
+            var path10=img10.src
+            var path11=img11.src
+            var path12=img12.src
+            var path13=img13.src
+            var path14=img14.src
+            var path15=img15.src
+            var path16=img16.src
+            var path17=img17.src
+            var path18=img18.src
+            var path19=img19.src
+            var path20=img20.src
+
+            img1.src=path20
+            img2.src=path19
+            img3.src=path18
+            img4.src=path17
+            img5.src=path16
+            img6.src=path15
+            img7.src=path14
+            img8.src=path13
+            img9.src=path12
+            img10.src=path11
+            img11.src=path10
+            img12.src=path9
+            img13.src=path8
+            img14.src=path7
+            img15.src=path6
+            img16.src=path5
+            img17.src=path4
+            img18.src=path3
+            img19.src=path2
+            img20.src=path1
+        
+            
+        }
+        function demo1(){
+        setInterval(demo,1000)  
+    }
+    </script>
+</body>
+</html>

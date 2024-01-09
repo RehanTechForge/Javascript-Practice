@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="display:flex;justify-content:center;align-items:center;flex-direction:column;">
+
+	<input type="text" placeholder="English Marks" id="v1" name=""> <span class="paper"></span><br/>
+	<input type="text" placeholder="Urdu Marks" id="v2" name=""><span class="paper1"></span><br/>
+	<input type="text" placeholder="Math Marks" id="v3" name=""><span class="paper2"></span><br/>
+
+	<p>Total Marks <span id="total">300</span> </p>
+
+	<span>Obtain Marks:</span><span id="obtain">  </span><br>
+
+	<span>percentage:</span><span id="percentage">  </span><br>
+
+	<span>Grade:</span><span id="grade">   <br>
+
+	<button onclick="demo()">GENERATE RESULT</button>
+
+	<script type="text/javascript">
+		
+		const demo = () =>{
+		const engNo = document.querySelector("#v1").value;
+		const urduNo = document.querySelector("#v2").value;
+		const mathNo = document.querySelector("#v3").value;
+
+
+		obtain = parseInt(engNo) + parseInt(urduNo) + parseInt(mathNo);
+		document.querySelector("#obtain").innerHTML = obtain;
+		per = obtain/300*100+"%";
+		document.querySelector("#percentage").innerHTML= per;
+		if(engNo<33){
+			document.querySelector("#grade").innerHTML= "FAIL";
+		}else if(urduNo<33){
+			document.querySelector("#grade").innerHTML= "FAIL";
+		}else if(mathNo<33){
+			document.querySelector("#grade").innerHTML= "FAIL";
+		}else{
+			if (per>="90") {
+			document.querySelector("#grade").innerHTML= "A+";
+		}else if(per>="80"){
+			document.querySelector("#grade").innerHTML= " A";
+		}else if(per>="70"){
+			document.querySelector("#grade").innerHTML= " B+";
+		}else if(per>="60"){
+			document.querySelector("#grade").innerHTML= " B";
+		}else if(per>="50"){
+			document.querySelector("#grade").innerHTML= " C";
+		}else if(per>="40"){
+			document.querySelector("#grade").innerHTML= " D";
+		}else if(per>="33"){
+			document.querySelector("#grade").innerHTML= " E";
+		}else{
+			document.querySelector("#grade").innerHTML= " FAIL";
+		}
+		}
+
+		
+		if(engNo<33){
+			document.querySelector(".paper").innerHTML="FAIL"
+		}else{
+			document.querySelector(".paper").innerHTML="PASS"
+		}
+
+		if(urduNo<33){
+			document.querySelector(".paper1").innerHTML="FAIL"
+		}else{
+			document.querySelector(".paper1").innerHTML="PASS"
+		}
+
+		if(mathNo<33){
+			document.querySelector(".paper2").innerHTML="FAIL"
+		}else{
+			document.querySelector(".paper2").innerHTML="PASS"
+		}
+
+		
+		}
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		.box{
+			background:skyblue;
+			width:500px;
+			margin:0px auto;
+			min-height:350px;
+			border:10px groove yellowgreen;
+			text-align:center;
+			padding:50px 0px;
+		}
+		p{
+			border:35px dotted blue;
+			font-size:65px;
+			color:white;
+			width:350px;
+			margin:150px auto;
+			padding:50px 10px;
+			background:maroon;
+			border-radius:10px;
+
+		}
+		button{
+			padding:10px 5px;
+			border-radius:10px;
+			border:none;
+			cursor:pointer;
+		}
+	</style>
+</head>
+<body onload="demo()">
+
+	<div class="box">
+		<p>#ab34h5</p>
+		<button>Change Color</button>
+	</div>
+
+	<script>
+
+		var str = "1b2d4e70a5f69c38"
+
+		function demo(){
+
+			color="#"
+			for(var i = 0;i<=5;i++){
+				var rIndex = Math.floor(Math.random()*16)
+				color=color+str[rIndex]
+				
+			}
+			document.querySelector("p").innerHTML=color;
+			document.querySelector("p").style.background=color;
+
+		}
+		setInterval(demo,1000);
+
+		const changeBackground = () =>{
+
+			document.querySelector(".box").style.background=document.querySelector("p").innerHTML;
+			
+
+		}
+		document.querySelector("button").addEventListener("click",changeBackground)
+
+	</script>
+
+</body>
+</html>

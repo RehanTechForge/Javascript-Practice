@@ -1,0 +1,47 @@
+<html>
+<head></head>
+<body>
+
+<span id="hh">00</span>
+<span id="mm">00</span>
+<span id="ss">00</span><br />
+<button onclick="demo(this)">Start</button>
+
+<script>
+
+var hh = document.getElementById('hh');
+var mm = document.getElementById('mm');
+var ss = document.getElementById('ss');
+
+h=0
+m=0
+s=0
+
+function demo(val){
+if(val.innerHTML=='Start'){
+val.innerHTML='Stop'
+
+}else{
+val.innerHTML='Start'
+}
+
+s++
+ss.innerHTML=s;
+if(s==60){
+m++
+mm.innerHTML=m;
+s=0
+if(m==60){
+h++
+hh.innerHTML=h;
+m=0
+}
+}
+
+}
+setInterval(demo,1000);
+
+
+</script>
+</body>
+</html>

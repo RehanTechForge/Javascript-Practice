@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style type="text/css">
+        
+        body{
+            background: black;
+            color: white;
+        }
+        .box{
+            width: 1045px;
+            padding: 20px;
+            height: 360px;
+            margin: 200px auto;
+            border: 10px groove yellowgreen;
+        }
+        .a{
+            width: 210px;
+            background: white;
+            height: 260px;
+            float: left;
+            margin: 50px 20px;
+            border-radius: 10px;
+            border: 5px groove green;
+            box-shadow: 0px 0px 20px 3px black inset;
+            font-size: 45px;
+            text-align: center;
+            color: black;
+        }
+        p:nth-child(2){
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <center>
+            <div class="a">
+                <p id="hh">00</p>
+                <p>HOURS</p>
+            </div>
+            <div class="a">
+                <p id="mm">00</p>
+                <p>MINUTES</p>
+            </div>
+            <div class="a">
+                <p id="ss">00</p>
+                <p>SECONDS</p>
+            </div>
+            <div class="a">
+                <p id="ms">00</p>
+                <p>MILI SECONDS</p>
+            </div>
+            <input type="submit" value="START" onclick="demo1(this)">
+        </center>
+    </div>
+
+    <script>
+        
+        hh = 0;
+        mm = 0;
+        ss = 0;
+        ms = 0;
+
+        function demo(){
+
+        var obj = document.querySelector("#hh");
+        var obj1 = document.querySelector("#mm");
+        var obj2 = document.querySelector("#ss");
+        var obj3 = document.querySelector("#ms");
+
+            ms++;
+            
+
+                if (ms == 1000) {
+                    ms=0;
+                    ss++;
+                    if (ss == 60) {
+                        ss=0;
+                        mm++;
+                        if (mm==60) {
+                            mm=0;
+                            hh++;
+                        }
+                    }
+                }
+
+                if (hh<10) {
+                    obj.innerHTML="0"+hh;
+                }else{
+                    obj.innerHTML=hh;
+                }
+                if (mm<10) {
+                    obj1.innerHTML="0"+mm;
+                }else{
+                    obj1.innerHTML=mm;
+                }
+                if (ss<10) {
+                    obj2.innerHTML="0"+ss;
+                }else{
+                    obj2.innerHTML=ss;
+                }
+                if (ms<10) {
+                    obj3.innerHTML="0"+ms;
+                }else{
+                    obj3.innerHTML=ms;
+                }
+
+                obj.innerHTML=hh;
+                obj1.innerHTML=mm;
+                obj2.innerHTML=ss;
+                obj3.innerHTML=ms;
+
+        }
+        
+        function demo1(x){
+            if (x.value=="START") {
+                x.value="STOP";
+                my = setInterval(demo,1);
+            }else{
+                x.value="START"
+                clearInterval(my);
+            }
+        }
+
+    </script>
+</body>
+</html>

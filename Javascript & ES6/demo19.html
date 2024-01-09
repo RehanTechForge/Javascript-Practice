@@ -1,0 +1,27 @@
+<html>
+<head></head>
+<body>
+<input type="password" />
+<input type="submit" onclick="demo()" id="btn" value="SHOW" />
+
+<script>
+
+const demo=()=>{
+var obj = document.querySelector("input");
+var btn = document.querySelector("#btn");
+if(btn.value=="SHOW"){
+btn.value="HIDE";
+obj.type="text";
+obj.style.border="5px groove red";
+btn.style.border="5px groove red";
+}else{
+btn.value="SHOW";
+obj.type="password";
+obj.style.border="5px groove green";
+btn.style.border="5px groove green";
+}
+}
+
+</script>
+</body>
+</html>

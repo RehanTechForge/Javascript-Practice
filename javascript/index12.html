@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+    img{
+        width: 600px;
+        height: auto;
+        object-fit: cover;
+        text-align: center;
+        display: block;
+        margin: 150px auto;
+        border: 10px groove red;
+    }
+    </style>
+</head>
+<body onload="slider()">
+    
+    <img src="images/a.jpg" alt="">
+
+    <script>
+        
+        var imgArray = ["001.jpg","002.jpg","003.jpg","004.jpg","005.jpg","006.jpg","007.jpg"];
+
+        var imgChange = document.querySelector("img");
+        var i = 0;
+        const slider = () =>{
+            imgChange.src = "images/"+imgArray[i];
+            i++;
+            if (i == imgArray.length) {
+                i = 0;
+            }
+        }
+        setInterval(slider,2000)
+
+
+        
+        // for (const index in arrHeading) {
+        //     document.write(`${index} present at ${arrHeading[index].innerHTML} index <br/>`)
+        // }
+
+        // for (let index = 0; index < arrHeading.length; index++) {
+        //     alert(arrHeading[index].innerText);
+            
+        // }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head></head>
+<body>
+First No:<br />
+<input type="text" id="txt1" /><br />
+Second No:<br />
+<input type="text" id="txt2" /><br />
+<p>Result Is:</p>
+<button onclick="demo(this)">+</button>
+<button onclick="demo(this)">-</button>
+<button onclick="demo(this)">*</button>
+<button onclick="demo(this)">/</button>
+<script>
+
+const demo = (e) =>{
+//alert(val1+e.innerHTML+val2)
+var val1 = parseInt(document.getElementById('txt1').value);
+var val2 = parseInt(document.getElementById('txt2').value);
+if(e.innerHTML=='+'){
+document.querySelector('p').innerHTML=val1+val2;
+}else if(e.innerHTML=='-'){
+document.querySelector('p').innerHTML=val1-val2;
+}else if(e.innerHTML=='*'){
+document.querySelector('p').innerHTML=val1*val2;
+}else if(e.innerHTML=='/'){
+document.querySelector('p').innerHTML=val1/val2;
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        img{
+            height: 200px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <img src="assets/images/1.jpg" id="im1" alt="">
+    <img src="assets/images/2.jpg" id="im2" alt=""><br>
+    
+    <script>
+        var demo=()=>{
+            var i1=document.getElementById("im1")
+            var i2=document.getElementById("im2")
+            
+
+            var path1=i1.src
+            var path2=i2.src
+
+            i1.src=path2
+            i2.src=path1
+        }
+        setInterval("demo()",1000)
+    </script>
+</body>
+</html>

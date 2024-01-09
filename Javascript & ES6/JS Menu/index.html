@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <nav class="h">
+        <figure>
+            <img src="assets/images/logo.png" alt="">
+        </figure>
+
+        <ul>
+            <li><a href="#" class="list-item">home</a></li>
+            <li><a href="#" class="list-item">about us</a></li>
+            <li><a href="#" class="list-item">contact us</a></li>
+            <li><a href="#" class="list-item">testimonials</a></li>
+            <li><a href="#" class="list-item">gallery</a></li>
+            <li><a href="#" class="list-item">log in</a></li>
+        </ul>
+    </nav>
+
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <script>
+        var burger = document.querySelector('.burger');
+        var menu = document.querySelector('nav');
+
+        burger.addEventListener('click',()=>{
+            if(menu.classList.contains('r')){
+                menu.classList.remove('r');
+            }else{
+                menu.classList.toggle('r');
+            }
+        });
+    </script>
+</body>
+</html>

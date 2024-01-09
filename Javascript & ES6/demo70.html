@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle{
+            display: none;
+        }
+        .rectangle{
+            display: none;
+        }
+        .triangle{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <select name="" onchange="changeElem()" id="selElem">
+        <option value="select" selected>Select Your Object</option>
+        <option value="circle" id="firstOpt">Circle</option>
+        <option value="rectangle" id="SecondOpt">Rectangle</option>
+        <option value="triangle" id="thirdOpt">Triangle</option>
+    </select>
+
+    <div class="circle">
+        <input type="text" value="3.142" id="piVal" readonly>
+        <input type="text" id="circleVal" placeholder="Enter Your Radius">
+        <p></p>
+        <button>Calculate</button>
+    </div>
+
+    <div class="rectangle">
+        <input type="text" id="length" placeholder="Enter Your length">
+        <input type="text" id="width" placeholder="Enter Your width">
+        <p></p>
+        <button>Calculate</button>
+    </div>
+
+    <div class="triangle">
+        <input type="text" id="height" placeholder="Enter Your height">
+        <input type="text" id="breath" placeholder="Enter Your breath">
+        <p></p>
+        <button>Calculate</button>
+    </div>
+
+    <script>
+        var firstOpt = document.querySelector('#firstOpt');
+        var SecondOpt = document.querySelector('#SecondOpt');
+        var thirdOpt = document.querySelector('#thirdOpt');
+        var selElem = document.querySelector('#selElem');
+        var circleObj = document.querySelector('.circle');
+        var recObj = document.querySelector('.rectangle');
+        var triObj = document.querySelector('.triangle');
+        function changeElem(){
+
+          if(selElem.value == 'circle'){
+            circleObj.style.display='block';
+            recObj.style.display='none';
+            triObj.style.display='none';
+            var circleBtn = document.querySelector('button');
+            circleBtn.addEventListener('click',()=>{
+                var circleVal = document.querySelector('#circleVal');
+                var circleRadius = circleVal.value;
+                var piVal = Number(document.querySelector('#piVal').value)
+                var circlePara = document.querySelector('p');
+
+                var circleFormula = piVal*Number(circleRadius)**2;
+
+                circlePara.innerHTML = circleFormula;
+
+                circleVal.value = '';
+
+            });
+          }else if(selElem.value == 'rectangle'){
+            recObj.style.display='block';
+            circleObj.style.display='none';
+            triObj.style.display='none'
+          }else if(selElem.value == 'triangle'){
+            triObj.style.display='block';
+            circleObj.style.display='none';
+            recObj.style.display='none';
+          }else{
+            alert('Please Enter Giver Value')
+            triObj.style.display='none';
+            circleObj.style.display='none';
+            recObj.style.display='none';
+          }
+
+
+        }
+
+
+    </script>
+</body>
+</html>

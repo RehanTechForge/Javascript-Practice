@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+    .parent{
+        background-color: bisque;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .childone{
+        background-color: aquamarine;
+        display: none;
+    }
+    .chiltwo{
+        background-color: antiquewhite;
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    
+     <div class="parent">
+    <button id="btn1" onclick="reg()">Register</button>     
+    <button id="btn2" onclick="log()">Log In</button>
+            <div class="childone">
+                    <h2>Register</h2>
+                    <input type="text" placeholder="Name" id="r1"><br>
+                    <input type="text" placeholder="Last Name" id="r2"><br>
+                    <input type="email" placeholder="Email" id="r3"><br>
+                    <input type="password" placeholder="password" id="r4"><br>
+            </div>
+    
+        <div class="chiltwo">
+            <h2>Log In</h2>
+            <input type="email" placeholder="Email" id="l1"><br>
+            <input type="password" placeholder="password" id="l2"><br>
+        </div>
+     </div>
+
+    <script>
+        
+        const obj1 = document.querySelector(".childone");
+        const obj2 = document.querySelector(".chiltwo");
+        const reg = () =>{
+            obj1.style.display="block"
+            obj2.style.display="none"
+        }
+        const log = () =>{
+            obj2.style.display="block" 
+            obj1.style.display="none"
+        }
+        
+
+    </script>
+</body>
+</html>

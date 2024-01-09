@@ -1,0 +1,802 @@
+Variable
+========
+=>variable is a value container to store data value.
+=>var keyword is used to declare a variable in javascript.
+--------
+Syntax
+--------
+var x =>declaretion
+x = 10 =>initialization
+var y = 10.11
+In Ecmascript 6
+=> let , const
+console.log()
+============
+=>console.log is used to display value on browser console.
+string
+=======
+string is sequence of character enclosed with single or double quote is known as string.
+example
+-------
+"rehan"
+'usman'
+"0123456789"
+'1234.44'
+=========
+var variable can be updated and re-declare.
+example
+-------
+var x=10;
+alert(x)//10
+x=50;
+alert(x)//50
+
+var x=60;
+alert(x)//60
+
+=========
+let
+===
+=>let variable can be updated but not re-declare.
+example
+----------
+let a
+a=50;
+alert(a)//50
+a=10
+alert(a)//10
+
+let a=2 // error
+
+const
+======
+=>const variable neither be updated nor re-declare.
+example
+-------
+const pi
+pi=3.142
+
+pi=3.14//error
+
+const pi//error
+
+Identfier
+==========
+=>any name is used in javascript is known as identifier.
+
+=>it can be function name variable name class name object name array name.
+example
+-------
+
+function demo{}
+
+var x
+
+class test
+
+array[]
+
+obj={}
+
+
+alert()
+=======
+=>alert box is used to display output on runtime.
+=>it is located in window object.
+
+window
+=======
+=>window is a predefined/primary object of javascript.
+=>it provide some method(function) and property(variable).
+
+object
+======
+=>object is collection of method(function) and property(variable).
+
+exa:
+alert()
+prompt()
+confirm()
+location
+open()
+settimeout()
+setinterval()
+clearinterval()
+print()
+etc.
+
+====================
+objectname.membername
+window.alert()
+
+
+prompt()
+========
+=>prompt function is used to take input from user on runtime.
+=>return type of prompt function is string.
+=>ok => true
+=>cancel => false
+
+syntax
+-------
+var variablename = prompt("fieldname","placeholder")
+
+var name = prompt("name","Enter your name...")
+
+type casting || type conversion
+===============================
+=>the process of converting one datatype value to another datatype value is known as type conversion or type casting.
+
+exa
+----
+"50"=>50
+'45'=>45
+"rehan"=> NAN => Not A Number.
+
+1.parseInt()
+2.Number()
+3.parseFloat()
+4.String()
+5.toString()
+
+confirm
+========
+=>confirm box is used to take confirmation on user.
+=>it has two buttons(ok , cancel).
+=>ok => true
+=>cancel => false
+
+syntax
+-------
+confirm("are you sure you want to delete your record.. ")
+
+getElementById()
+=================
+=>getElementById function is used to select HTML element on the basis of ID.
+=>getElementById function is defined in document object.
+=>return type of getElementById function is current object.
+=>Document is the built-in object of DOM(Document Object Model)
+
+syntax
+-------
+document.getElementById("IdOfHTMLElement")
+
+step to apply css with JS
+-------------------------
+
+var x = document.getElementById("idofHTMLelement")
+
+object.style.propertyName="value";
+x.style.color="blue";
+x.style.backgroundColor="navy";
+x.borderRadius="10px";
+
+
+value
+======
+=>value property is used to set/get value of selected HTML form-control(input,select,textarea,buttons).
+=>return type of value is string.
+
+<input type="text" id="txt" /> // 50
+
+get
+===
+var value = document.getElementById("txt").value
+
+set
+====
+var value1 = document.getElementById("valueofformcontrol");
+value1.value=value; 
+
+write()
+========
+=>write function is used to display o/p on HTML document page.
+=>it is defined document object.
+
+syntax
+------
+document.write("Your Message")
+
+innerText
+==========
+=>innerText property is used to set/get normal text of selected	HTML element.
+get
+-------
+document.getElementById(idofHTMLelement).innerText;
+
+set
+----
+document.getElementById(idofHTMLelement).innerText="rehan"
+
+
+
+<div id="msg">muhammad</div>
+document.getElementById("idofHTMLelement").innerText="rehan"
+
+
+Location
+=========
+=>location property is used to re-direct one page to anonther page.
+=>it is defined in window object.
+syntax
+--------
+window.location="https://www.google.com";
+
+src
+====
+=>src property is used to set/get value of src attribute.
+
+<img src="assets/images/img.jpg" />
+
+setInterval()
+==============
+=>setInterval function is used to to execute a group of statement for every given time interval.
+=>setInterval is defined in window object.
+
+syntax
+-------
+window.setInterval(functionName,Time in MiliSecond)
+OR
+window.setInterval("functionName()",Time in MiliSecond)
+
+const demo=()=>{
+
+}
+window.setInterval(demo,1000)
+window.setInterval("demo()",1000)
+setInterval(demo,1000)
+setInterval("demo()",1000)
+
+
+1 second = 1000 ML
+
+querySelector
+==============
+=>querySelector is used to select first matches of selected HTML element.
+=>querySelector method is defined in document object.
+<p>para 1</p>
+<p>para 2</p>
+<p>para 3</p>
+
+document.querySelector("p")
+
+setTimeout()
+=============
+=>setTimeout function is used to execute a once group of statement after time given interval.
+=>setTimeout function is defined in window object.
+
+syntax
+-------
+window.setTimeout(functionName,Time in MiliSecond)
+OR
+window.setTimeout("functionName()",Time in MiliSecond)
+
+const demo=()=>{
+
+}
+window.setTimeout(demo,1000)
+window.setTimeout("demo()",1000)
+setTimeout(demo,1000)
+setTimeout("demo()",1000)
+
+1 second = 1000 ML
+
+innerHTML
+==========
+=>innerHTML property is used to set/get text wit tag of selected HTML element.
+
+<p id="p1"><b>Welcome To JS</b></p>
+
+get
+====
+document.querySelector("p1").innerHTML;
+set
+===
+document.querySelector("p1").innerHTML="<u>Pakistan Zindabad</u>";
+
+type
+=====
+=>type property is used to set/get value of type attribute of selected form-control.
+
+= => value assignment
+== =>to check only value of operands.
+example
+--------
+"10"==10 => true
+
+=== =>strict equal to check value and datatype of both operands.
+example
+--------
+"10"===10 => false
+
+setAttribute
+getAttribute
+removeAttribute
+hasAttribute
+
+setAttribute()
+==============
+=>setAttribute function is used to set attribute value of any selected HTML element.
+<input type="password" />
+
+syntax
+-------
+objectname.setAttribute("attributename","attributevalue")
+document.querySelector("input").setAttribute("type","text")
+
+
+getAttribute()
+==============
+=>getAttribute function is used to get attribute value of any selected HTML element.
+<input type="password" />
+
+syntax
+-------
+objectname.setAttribute("attributename")
+document.querySelector("input").setAttribute("type")
+
+
+removeAttribute()
+==============
+=>removeAttribute function is used to remove attribute value of any selected HTML element.
+<input type="password" />
+
+syntax
+-------
+objectname.setAttribute("attributename")
+document.querySelector("input").setAttribute("type")
+
+
+hasAttribute()
+==============
+=>hasAttribute function is used to check attribute of any selected HTML element.
+<input type="password" />
+
+syntax
+-------
+objectname.setAttribute("attributename")
+document.querySelector("input").setAttribute("type")
+
+operator
+=========
+=>operator is a symbol to perform operation over the operands.
+
+1.Arithematic Operator
++,-,/,*,%
+
+x=10y=3
+z=5
+console.log(x+y)//13
+console.log(x-y)//7
+console.log(x/y)//3.333
+console.log(x*y)//30
+console.log(x%y)//1 Remainder
+console.log(x%z)//2 Remainder
+
+2.Relation Operator || Comparision Operator
+<,>,<=,>=,==,===
+
+x=10
+y=2
+z="2"
+
+
+console.log(x>y)//true
+console.log(x>=y)//true
+console.log(x<y)//false
+console.log(x<=y)//false
+console.log(x==y)//false
+console.log(z==y)//true
+console.log(z===y)//false
+
+3.Assignment Operator
+=,+=,-=,/=,*=,%=
+
+var x=10
+var y=2
+
+var x+=y => x=x+y // 12
+var x-=y => x=x-y // 8
+var x*=y => x=x*y // 20
+var x/=y => x=x/y // 5
+var x%=y => x=x%y // 0
+
+
+
+4.Logical Operator
+and or not
+&& and =>it returns true if both arguments are true otherwise it return false.
+
+var x=10
+var y=20
+
+true && true => true
+false && true => false
+true && false =>false
+false && false =>false
+
+|| or=>it return true if at least one argument is true.
+
+true || true =>true
+true || fasle =>true
+false || true =>true
+false || false =>false
+
+!  not
+
+!true => false
+!false => true
+
+!(true || true) =>false
+!(true || false) =>false
+!(false || true) =>false
+!(false || false) =>true
+
+
+5.Increament and Decreament Operator
+
+var x = 2
+x+=1 =>x=x+1
+x-=1 =>x=x-1
+
+a)Increament Operator
+======================
+=>Increament operator is used to increament value by 1.
+
+(i). Pre-Increament operator
+
+syntax
+-------
+++variablename
+
+Rules
+-------
+1.pre-increament // post-increament
+2.subtitution
+3.evolution // calculate
+4.assignment
+5.post-increament // post-decreament
+
+var x=10 //11 //
+var y=5
+
+x=++y*x--
+
+alert(x)//55
+alert(y)//9
+
+
+
+(ii). Post-Increament operator
+
+6.Conditional Operator || Ternary Operator
+
+
+Array in Javascript
+====================
+=>in Javascript array is the collection of heterogeneous datatype element.
+=>indexing of array start from 0 and last index is arraylength-1.
+
+
+syntax 1
+---------
+var arrayName = [item1,item2,item3,item4......itemN]
+Exa:
+var myArr = ["hello",10,10.3,"10",true]
+
+How To Access Element In Array
+===============================
+arrayName[index]
+
+Exa:
+----
+var myArr = ["hello",10,10.3,"10",true]
+alert(myArr[0]) //hello
+alert(myArr[1]) //10
+alert(myArr[2]) //10.3
+alert(myArr[3]) //10
+alert(myArr[4]) //true
+alert(myArr[5]) //undefined
+
+
+syntax 2
+---------
+var arrayName =new Array(item1,item2,item3,item4......itemN)
+Exa:
+var empInfo = new Array("Rehan","Karachi",50000,18);
+
+Date
+=====
+=>Date object is providing some method to related current date and time.
+
+syntax
+--------
+var d = new Date();
+
+getDay();
+getDate();
+getMonth();
+getMinutes();
+getHours();
+getFullYear();
+getSeconds();
+getMilliSeconds();
+getWeek();
+etc.
+
+Function in JS
+=================
+=>Function is block of re-usable code which is used to perform a particular task.
+=>Types of Function
+====================
+built-in Function || Predefined Function
+==========================================
+=>the Function which are pre-defined in client(web browser)known as built-in Function.
+Exa:
+-----
+alert();
+prompt();
+console.log();
+setInterval();
+document.write();
+clearInterval();
+setTimeout();
+etc.
+
+2.User Defined Function || UDF
+===============================
+=>the function which are developed by user based on business logic are known as UDF.
+
+a).Function
+b).return
+
+syntax 1
+---------
+function FunctionName(){
+statement
+statement
+statement
+statement
+}
+
+ES6 => Arrow Function
+let demo = () =>{
+statement
+statement
+statement
+statement
+}
+
+==============================
+Function with Parameter
+========================
+=>parameter inputs to the function.
+
+syntax
+-------
+function demo(param1,param2,param3,.....paramN){
+statement
+statement
+statement
+}
+
+Calling of Parameterize function
+==================================
+function demo(num1,num2){
+alert(num1+num2)
+}
+demo(40,40)//80
+
+const demo = (num1,num2) =>{
+alert(num1+num2)
+}
+demo(30,30)//60
+
+function with default parameter
+================================
+let demo = (num1=10,num2=20) =>{
+alert(num1+num2)
+}
+demo()//30
+demo(40)//60
+demo(40,30)//70
+
+function demo(x,y,z)//Formal Argument
+{
+alert(x+y+z)
+}
+demo(10,10,10)//Actual Argument
+
+===================
+function demo(...x) //Rest Operator
+{
+alert(x)
+}
+demo(1)//[1]
+demo(1,2)//[1,2]
+demo(1,2,3)//[1,2,3]
+demo(1,2,3,60,90)//[1,2,3,60,90]
+
+==================================
+Anonymous Function || Unamed Function
+=======================================
+=>the function which have no any name is known as anonymous function.
+
+function(){
+statement
+statement
+statement
+}
+
+callback =>function within function.
+
+function demo(){
+alert('ok')
+}
+
+window.setInterval(demo,5000);
+================================
+window.setInterval(function(){ // normal anonymous function
+alert('ok')
+},5000);
+
+window.setInterval(() =>{ //arrow anonymous function
+alert('ok')
+},5000);
+
+
+getElementByTagName
+===================
+=>getElementByTagName function is used to to select matches element(tag) in form of array.
+=>getElementByTagName function is defined in document object.
+
+syntax
+-------
+document.getElementByTagName('tagName')//return collection
+
+<p>HTML</p>
+<p>CSS</p>
+<p>JS</p>
+<p>JQUERY</p>
+
+
+length
+=======
+=>length property is used to get length of array or string.
+
+
+clearInterval
+===============
+=>clearInterval function is used to stop functionality of setInterval.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

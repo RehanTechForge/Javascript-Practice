@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <input type="password" value="admin" id="value">
+    <button onclick="demo()">SHOW</button>
+
+
+    <script>
+        
+        const demo = () =>{
+
+            const path = document.querySelector("#value");
+            const btn = document.querySelector("button");
+            const btn1 = btn.innerHTML;
+            if(btn1 == "SHOW"){
+                btn.innerHTML="HIDE";
+                path.setAttribute("type","text");
+                btn.style.border="10px groove red"
+                path.style.border="10px groove red";
+            }else{
+                btn.innerHTML="SHOW"; 
+                path.setAttribute("type","password");
+                path.style.border="10px groove green";
+                btn.style.border="10px groove green";
+            }
+
+        }
+        
+    </script>
+</body>
+</html>

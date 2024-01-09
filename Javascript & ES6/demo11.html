@@ -1,0 +1,36 @@
+<html>
+<head></head>
+<body>
+<p id="msg1">Hello World</p>
+<p id="msg2">Pakistan Zindabad</p>
+<button onclick="demo()">Swap text</button>
+
+<script>
+
+
+var demo=()=>{
+
+var v1 = document.getElementById("msg1");
+var v2 = document.getElementById("msg2");
+
+var path1 = v1.innerText
+var path2 = v2.innerText
+
+v1.innerText=path2
+v2.innerText=path1
+
+v1.style.color="red"
+v1.style.backgroundColor="black"
+v1.style.border="5px dashed green"
+v1.style.borderRadius="10px"
+
+v2.style.color="red"
+v2.style.backgroundColor="black"
+v2.style.border="5px dashed green"
+v2.style.borderRadius="10px"
+}
+
+</script>
+
+</body>
+</html>

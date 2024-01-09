@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+    p{
+        background: aquamarine;
+        color: rgb(214, 145, 55);
+        text-transform: uppercase;
+        text-align: center;
+        margin: 350px auto;
+        padding: 25px 30px;
+        display: inline-block;
+
+    }
+    </style>
+</head>
+<body onload="textSlider()">
+    <center>
+    <p>hello world</p>
+</center>
+    <script>
+        
+        const myParaArr = ["Muhammad Rehan","Muhammad Usman","Matric","Info Academy Secondary School","Sir Mukhtar","Sir Rehan"];
+        i=0;
+        const path = document.querySelector("p");
+        
+        const textSlider = () =>{
+            const text = path.innerText=myParaArr[i];
+            i++;
+            if(i==myParaArr.length){
+                i=0;
+            }
+        }
+        setInterval(textSlider,2000);
+        
+    </script>
+</body>
+</html>

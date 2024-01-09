@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <p id="even"></p>
+    <p id="odd"></p>
+    
+    <button onclick="even()">EVEN NUMBER</button>
+    <br>
+    <button onclick="odd()">ODD NUMBER</button>
+
+    <script>
+        
+        const even = () =>{
+
+            for (let e = 0; e <= 100; e++) {
+                if (e%2 == 0) {
+                    document.write(e+"<br/>");
+                }  
+            }
+
+        }
+
+        const odd = () =>{
+
+            for (let e = 0; e <= 100; e++) {
+                if (e%2 != 0) {
+                    document.write(e+"<br/>");
+                }  
+            }
+
+            }
+        
+
+    </script>
+</body>
+</html>

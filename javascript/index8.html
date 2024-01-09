@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+    img{
+        height: 500px;
+        width: 700px;
+        object-fit: cover;
+        border: 5px groove green;
+        margin: 50px 0px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body onload="slider()">
+    <center>
+    <img src="images/a.jpg" alt="">
+</center>
+
+<script>
+
+    const myArr = ["001.jpg","002.jpg","003.jpg","004.jpg","005.jpeg","006.jpg","007.jpg"];
+    const myBorderArr = ["black","blue","green","skyblue","orange","red","purple"];
+
+    const im = document.querySelector("img");
+    var i=0;
+    const slider = () =>{
+        im.src="images/"+myArr[i];
+        im.style.border="5px groove "+myBorderArr[i];
+        i++;
+        if(i == myArr.length){
+            i = 0;
+        }
+    }
+    setInterval(slider,2000);
+
+</script>
+
+</body>
+</html>

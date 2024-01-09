@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body onload="alphabet_order()">
+    
+
+    <script>
+        // Write a JavaScript function that reverse a number.
+        // Sample Data and output:
+        // Example x = 32243;
+        // Expected Output : 34223
+        // function reverse() {
+        //     let pro = prompt('Enter Your Number');
+        //     let t = pro.split("").reverse().join("");
+        //     document.write(t);
+        // }
+        
+        // Write a JavaScript function that returns a passed string with letters in
+        // alphabetical order.
+        // Example string : 'webmaster'
+        // Expected Output : 'abeemrstw'
+        // function alphabet_order(str) {
+        //     return str.split("").sort().join("");
+            
+        // }
+        // document.write(alphabet_order('webmaster'));
+
+        // Write a JavaScript function that accepts a string as a parameter and counts the
+        // number of vowels within the string.
+        // Note : As the letter 'y' can be regarded as both a vowel and a consonant, we do
+        // not count 'y' as vowel here.
+        // vowels aeiou
+        // Sample Data and output:
+        // Example string : 'The quick brown fox'
+        // Expected Output : 5
+
+        // function vowel_count(str) {
+        //     var vowel_list = 'aeiouAEIOU';
+        //     var vcount = 0; 
+        //     for (let index = 0; index < str.length; index++) {
+        //         if (vowel_list.indexOf(str[index]) !== -1) {
+        //             vcount += 1;
+        //         }
+        //     }
+        //     return vcount;
+        // }
+        // document.write(vowel_count("The quick brown fox"));
+
+        // Write a JavaScript function that accepts a string as a parameter and converts the
+        // first letter of each word of the string in upper case.
+        // Example string : 'the quick brown fox'
+        // Expected Output : 'The Quick Brown Fox '
+
+        // function uppercase(str) {
+        //     var arr = str.split(' ');
+        //     var arr1 = [];
+        //     for (let index = 0; index < arr.length; index++) {
+        //         arr1.push(arr[index].charAt(0).toUpperCase()+arr[index].slice(1));
+        //     }
+        //     return arr1.join(' ');
+        // }
+        // document.write(uppercase("the quick brown fox"));
+
+        // Write a JavaScript program to get the current date.
+        // Expected Output :
+        // mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
+
+        // var today = new Date();
+        // var dd = today.getDate();
+        // var mm = today.getMonth() + 1;
+        // var yy = today.getFullYear();
+        
+        // document.write(`${mm}-${dd}-${yy}, <br />${mm}/${dd}/${yy}, <br />`);
+
+        // Write a JavaScript program that accept two integers and display the larger.
+
+        // var num1,num2;
+        // num1 = +prompt("Enter First No");
+        // num2 = +prompt("Enter Second No");
+
+        // if(num1 > num2){
+        //     document.write("The larger of "+ num1+ " and "+ num2+ " is "+ num1+ "."); 
+        // }else if(num2 > num1){
+        //     document.write("The larger of "+ num1+" and "+ num2+ " is "+ num2+ ".");
+        // }else{
+        //     document.write("The values "+ num1+ " and "+num2+ " are equal."); 
+        // }
+
+        // Write a JavaScript conditional statement to find the sign of product of three numbers. Display an alert box
+        // with the specified sign.
+        // Sample numbers : 3, -7, 2
+        // Output : The sign is -
+
+        var x = 3;
+        var y = -7;
+        var z = -2
+
+        if(x>0&&y>0&&z>0){
+            alert("The sign is +"); 
+        }else if(x<0&&y<0&&z>0){
+            alert("The sign is +"); 
+        }else if(x>0&&y<0&&z<0){
+            alert("The sign is +"); 
+        }else if(x<0&&y>0&&z<0){
+            alert("The sign is +"); 
+        }else{
+            alert("The sign is -"); 
+            
+        }
+
+
+
+    </script>
+</body>
+</html>

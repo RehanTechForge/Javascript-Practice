@@ -1,0 +1,22 @@
+<script>
+
+<!-- async function demo(){ -->
+<!-- let data = await fetch(`https://randomuser.me/api/`); -->
+<!-- let res = await data.json(); -->
+<!-- console.log(res); -->
+<!-- }; -->
+
+<!-- demo(); -->
+
+let req = fetch(`https://randmuser.me/api/`);
+req
+.then(function(res,rej){
+return res.json();
+}).then(function(data){
+console.log(data)
+})
+.catch(function(res,rej){
+console.log(rej)
+})
+
+</script>

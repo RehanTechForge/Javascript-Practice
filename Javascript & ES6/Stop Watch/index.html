@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="time">
+          <span class="hour" id="getHour">00</span>
+          <span class="colon">:</span>
+          <span class="minute" id="getMinute">00</span>
+          <span class="colon">:</span>
+          <span class="second" id="getSecond">00</span>
+          <span class="colon ms-colon">:</span>
+          <span class="millisecond" id="getMiliSecond">00</span>
+        </div>
+        <div class="buttons">
+          <button class="start" onclick="stopWatch()">Start</button>
+          <button class="stop" onclick="stop()">Stop</button>
+          <button class="reset" onclick="reset()">Reset</button>
+        </div>
+      </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

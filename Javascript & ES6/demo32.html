@@ -1,0 +1,54 @@
+<html>
+<head></head>
+<style>
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+background-color:FFF0F5;
+}
+div{
+width:30vw;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+text-align:center;
+border-radius:10px;
+}
+div p{
+word-spacing:1.2px;
+letter-spacing:1.5px;
+text-shadow: 3px 3px 2px rgba(0,0,0,0.28);
+font-size:2rem;
+font-weight:900;
+font-family:cursive;
+}
+</style>
+<body onload="call()">
+
+<div>
+<p>Loading...</p>
+</div>
+
+</body>
+<script>
+
+let myTextArr = ["Muhammad Rehan","Muhammad Usman","First Year",
+"Pre-Enginering","Inter Boys Government Collage"]
+let myColorArr = ["FFEEF4","F3FDE8","A8DF8E","FEFFAC","CAEDFF"]
+
+let textObj = document.querySelector("p");
+i=0
+let textSlide=()=>{
+textObj.innerHTML=myTextArr[i]
+textObj.style.color=myColorArr[i]
+i++;
+if(i==myTextArr.length){
+i=0
+}
+}
+
+let call=()=>{
+setInterval(textSlide,1000)
+}
+
+</script>
+</html>

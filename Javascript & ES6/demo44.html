@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <div class="main">
+        <div class="inputMain"><input type="text" placeholder="0" id="inp" readonly></div>
+        <div class="firstDiv">
+            <button onclick="clr()">C</button>
+            <button onclick="clre()">CE</button>
+            <button>%</button>
+            <button onclick="calc('/')">/</button>
+        </div>
+        <div class="firstDiv">
+            <button class="mainColor" onclick="calc(7)">7</button>
+            <button class="mainColor" onclick="calc(8)">8</button>
+            <button class="mainColor" onclick="calc(9)">9</button>
+            <button onclick="calc('*')">X</button>
+        </div>
+        <div class="firstDiv">
+            <button class="mainColor" onclick="calc(4)">4</button>
+            <button class="mainColor" onclick="calc(5)">5</button>
+            <button class="mainColor" onclick="calc(6)">6</button>
+            <button onclick="calc('-')">-</button>
+        </div>
+        <div class="firstDiv">
+            <button class="mainColor" onclick="calc(1)">1</button>
+            <button class="mainColor" onclick="calc(2)">2</button>
+            <button class="mainColor" onclick="calc(3)">3</button>
+            <button onclick="calc('+')">+</button>
+        </div>
+        <div class="firstDiv">
+            <button class="mainColor" onclick="calc(0)">0</button>
+            <button class="mainColor" onclick="calc('.')">.</button>
+            <button id="mainBtn" onclick="eq()">=</button>
+        </div>
+    </div>
+
+    <script src="assets/js/app1.js"></script>
+</body>
+</html>

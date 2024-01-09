@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width3device-width, initial-scale=3">
+    <link rel="stylsheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        img{
+            height: 200px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="assets/images/1.jpg" id="im1" alt="">
+    <img src="assets/images/2.jpg" id="im2" alt="">
+    <img src="assets/images/3.jpg" id="im3" alt="">
+    <img src="assets/images/4.jpg" id="im4" alt="">
+    <img src="assets/images/5.jpg" id="im5" alt="">
+    <img src="assets/images/6.jpg" id="im6" alt="">
+    <img src="assets/images/7.jpg" id="im7" alt="">
+    <img src="assets/images/8.jpg" id="im8" alt="">
+
+    <button onclick="demo()">image swap</button>
+
+    <script>
+        var demo=()=>{
+            var i1=document.getElementById("im1").src="assets/images/8.jpg"
+            var i2=document.getElementById("im2").src="assets/images/7.jpg"
+            var i3=document.getElementById("im3").src="assets/images/6.jpg"
+            var i4=document.getElementById("im4").src="assets/images/5.jpg"
+            var i5=document.getElementById("im5").src="assets/images/4.jpg"
+            var i6=document.getElementById("im6").src="assets/images/3.jpg"
+            var i7=document.getElementById("im7").src="assets/images/2.jpg"
+            var i8=document.getElementById("im8").src="assets/images/1.jpg"
+        }
+    </script>
+</body>
+</html>

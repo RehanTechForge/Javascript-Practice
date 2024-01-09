@@ -1,0 +1,66 @@
+<html>
+<head></head>
+<body>
+
+First No: <br />
+<input type="text" id="txt" />
+<br />
+
+Second No: <br />
+<input type="text" id="txt1" />
+<br />
+<p id="para"></p>
+<button onclick="add()">ADD</button>
+<button onclick="sub()">SUB</button>
+<button onclick="mul()">MUL</button>
+<button onclick="div()">DIV</button>
+<script>
+
+var val = document.getElementById("txt");
+
+var val1 = document.getElementById("txt1");
+
+function add(){
+
+var res = parseInt(val.value)+parseInt(val1.value)
+
+//alert("Result is: "+res)
+
+document.getElementById("para").innerText="Result is: "+res;
+
+}
+
+function sub(){
+
+var res = parseInt(val.value)-parseInt(val1.value)
+
+//alert("Result is: "+res)
+
+document.getElementById("para").innerText="Result is: "+res;
+
+}
+
+function mul(){
+
+var res = parseInt(val.value)*parseInt(val1.value)
+
+//alert("Result is: "+res)
+
+document.getElementById("para").innerText="Result is: "+res;
+
+}
+
+function div(){
+
+var res = parseInt(val.value)/parseInt(val1.value)
+
+//alert("Result is: "+res)
+
+document.getElementById("para").innerText="Result is: "+res;
+
+}
+
+</script>
+
+</body>
+</html>

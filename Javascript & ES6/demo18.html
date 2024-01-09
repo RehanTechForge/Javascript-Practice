@@ -1,0 +1,65 @@
+<html>
+<head></head>
+<style>
+img{
+height:100px;
+width:100px;
+}
+</style>
+<body>
+<img src="assets/images/img.jpeg" id="im1" />
+<img src="assets/images/img1.jpeg" id="im2" />
+<img src="assets/images/img2.jpeg" id="im3" />
+<img src="assets/images/img3.jpeg" id="im4" />
+<img src="assets/images/img4.jpeg" id="im5" />
+<img src="assets/images/img5.jpeg" id="im6" />
+<img src="assets/images/img6.jpeg" id="im7" />
+<img src="assets/images/img7.jpeg" id="im8" />
+<img src="assets/images/img8.jpeg" id="im9" />
+<img src="assets/images/img9.jpeg" id="im10" />
+<br />
+<button onmouseover="demo1()">Image Swap</button>
+<script>
+
+function demo(){
+
+var img1 = document.getElementById("im1");
+var img2 = document.getElementById("im2");
+var img3 = document.getElementById("im3");
+var img4 = document.getElementById("im4");
+var img5 = document.getElementById("im5");
+var img6 = document.getElementById("im6");
+var img7 = document.getElementById("im7");
+var img8 = document.getElementById("im8");
+var img9 = document.getElementById("im9");
+var img10 = document.getElementById("im10");
+
+var path1 = img1.src;
+var path2 = img2.src;
+var path3 = img3.src;
+var path4 = img4.src;
+var path5 = img5.src;
+var path6 = img6.src;
+var path7 = img7.src;
+var path8 = img8.src;
+var path9 = img9.src;
+var path10 = img10.src;
+
+img1.src=path2;
+img2.src=path3;
+img3.src=path4;
+img4.src=path5;
+img5.src=path6;
+img6.src=path7;
+img7.src=path8;
+img8.src=path9;
+img9.src=path10;
+img10.src=path1;
+}
+
+const demo1=()=>{
+setInterval("demo()",2000)
+}
+</script>
+</body>
+</html>

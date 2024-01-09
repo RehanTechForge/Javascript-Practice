@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		.img{
+			height: 200px;
+			width: 200px;
+			border: 10px groove green;
+			margin: 10px 20px;
+		}
+		.bx{
+			height: 100%;
+			width: 100%;
+			background: rgba(0,0,0,0.3);
+			position: fixed;
+			top: 0%;
+			left: 0%;
+			display: none;
+		}
+		.bx1{
+			padding: 10px;
+			background: white;
+			width: 600px;
+			height: 400px;
+			margin: 100px auto;
+		}
+		.bx1>img{
+			height: 80%;
+			width: 100%;
+
+		}
+	</style>
+</head>
+<body>
+
+	<center>
+		
+		<h1>IMAGE GALLERY</h1>
+		<hr>
+
+		<img src="images/001.jpg" onclick="demo(this)" class="img" id="Simg">
+		<img src="images/002.jpg" onclick="demo(this)" class="img" id="Simg">
+		<img src="images/003.jpg" onclick="demo(this)" class="img" id="Simg"><br>
+		<img src="images/004.jpg" onclick="demo(this)" class="img" id="Simg">
+		<img src="images/005.jpeg" onclick="demo(this)" class="img" id="Simg">
+		<img src="images/006.jpg" onclick="demo(this)" class="img" id="Simg">
+	</center>
+
+	<div class="bx">
+		<div class="bx1">
+			<center><h3>Image <b style="float:right;"><a href="index15.html">X</a></b> </h3></center>
+			<img src="" id="Bimg">
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		
+		var demo = (x) =>{
+			document.querySelector(".bx").style.display="block";
+			document.querySelector("#Bimg").src=x.src;
+		}
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .overlay{
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            z-index: -1;
+            visibility: hidden;
+            transition: all .2s linear;
+        }
+        .main{
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.3) inset;
+            padding: 10px 20px;
+            
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transition: all .5s linear;   
+        }
+        .maino{
+            top: 50%;
+        }
+        .o{
+            visibility: visible;
+        }
+        span{
+            font-size: 25px;
+            float: right;
+            cursor: pointer;
+        }
+        img{
+            width: 150px;
+    display: block;
+    margin: 0px auto;
+    border-radius: 50%;
+    object-fit: fill;
+        }
+        p{
+            text-align: center;
+    margin-top: 18px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button onclick="demo()">Alert</button>
+
+    <div class="overlay" onclick="demo1()"></div>
+    <div class="main">
+        <span onclick="demo1()">&times;</span>
+        <figure>
+            <img src="img.jpeg" alt="">
+        </figure>
+        <p>You Are Log In</p>
+    </div>
+
+    <script>
+        function demo(){
+            document.querySelector('.overlay').classList.add('o')
+            document.querySelector('.main').classList.add('maino');
+        }
+        function demo1(){
+            document.querySelector('.overlay').classList.remove('o')
+            document.querySelector('.main').classList.remove('maino');
+        }
+    </script>
+</body>
+</html>

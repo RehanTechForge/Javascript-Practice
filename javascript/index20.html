@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<input onkeyup="demo()" type="number" name=""><span></span>
+	<button>CLICK ME</button>
+
+	<script type="text/javascript">
+		
+			var obj = document.querySelector("input");
+		var demo=()=>{
+
+
+			if (obj.value.length == 6) {
+				document.querySelector("span").innerHTML="VALID PINCODE"
+			}else{
+				document.querySelector("span").innerHTML="INVALID PINCODE"
+			}
+
+		}
+
+	</script>
+
+</body>
+</html>

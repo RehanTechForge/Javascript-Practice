@@ -1,0 +1,35 @@
+<html>
+<head></head>
+<style>
+.para{
+color:red;
+background:black;
+border:10 px groove green;
+border-radius:5px;
+text-align:center;
+font-size:50px;
+}
+</style>
+<body>
+
+<p>Add Class To Design Our Paragraph..</p>
+<input type="button" value="Add style" onclick="demo()">
+<script>
+
+const demo=()=>{
+var paraObj = document.querySelector("p");
+var btnObj = document.querySelector("input");
+
+if(btnObj.value=="Add style"){
+btnObj.value="Remove style";
+paraObj.setAttribute("Class","para")
+paraObj.innerText="Remove class to design default..";
+}else{
+btnObj.value="Add style";
+paraObj.removeAttribute("Class","para")
+paraObj.innerText="Add Class To Design Our Paragraph.."
+}
+}
+</script>
+</body>
+</html>

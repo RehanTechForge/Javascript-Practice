@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            background-color: rgba(0, 0, 0, 0.3);
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            visibility: hidden;
+            transition: all .2s linear;
+        }
+        .overlay{
+            visibility: visible;
+            transition: all .5s linear;
+        }
+        .reg{
+            background-color: white;
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.6);
+            height: min-content;
+            width: 30vw;
+            margin: 0px auto;
+            padding: 20px 30px;
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transition: all .5s linear;
+        }
+        .regoverlay{
+            top: 50%;
+        }
+        span{
+            position: fixed;
+            top: 2%;
+            right: 4%;
+            cursor: pointer;
+        }
+        .main1{
+            background-color: rgba(0, 0, 0, 0.3);
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            visibility: hidden;
+            transition: all .2s linear;
+        }
+        .overlay1{
+            visibility: visible;
+            transition: all .5s linear;
+        }
+        .reg1{
+            background-color: white;
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.6);
+            height: min-content;
+            width: 30vw;
+            margin: 0px auto;
+            padding: 20px 30px;
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transition: all .5s linear;
+        }
+        .regoverlay1{
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+    <button onclick="demo()">Register</button>
+    <button onclick="demo1()">Log In</button>
+
+    <div class="main" onclick="
+    document.querySelector('.overlay').style.visibility='hidden'">
+        
+        <div class="reg">
+            <span onclick="
+                document.querySelector('.main').classList.remove('overlay');
+                document.querySelector('.reg').classList.remove('regoverlay');
+            ">X</span>
+            <input type="text">
+            <input type="text">
+
+        </div>
+    </div>
+
+    <div class="main1" onclick="
+    document.querySelector('.overlay1').style.visibility='hidden'">
+        
+        <div class="reg1">
+            <span onclick="
+                document.querySelector('.main1').classList.remove('overlay1');
+                document.querySelector('.reg1').classList.remove('regoverlay1');
+            ">X</span>
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </div>
+    </div>
+    
+    <script>
+
+        function demo(){
+            document.querySelector('.main').classList.add('overlay');
+            document.querySelector('.reg').classList.add('regoverlay');
+            //document.querySelector('.main').classList.remove('overlay');
+        }
+        function demo1(){
+            document.querySelector('.main1').classList.add('overlay1');
+            document.querySelector('.reg1').classList.add('regoverlay1');
+            //document.querySelector('.main').classList.remove('overlay');
+        }
+
+    </script>
+</body>
+</html>

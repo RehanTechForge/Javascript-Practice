@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1 id="h1">hello</h1>
+    <h1 id="h2">world</h1>
+    <button onclick="demo()">swap text</button>
+    <script>
+        function demo() {
+            var h11=document.getElementById("h1")
+            var h22=document.getElementById("h2")
+
+            var txt1=h11.innerText
+            var txt2=h22.innerText
+
+            h11.innerText=txt2
+            h22.innerText=txt1
+
+            h11.style.color="green"
+            h22.style.color="red"
+            h11.style.backgroundColor="black"
+            h22.style.backgroundColor="black"
+        }
+    </script>
+</body>
+</html>

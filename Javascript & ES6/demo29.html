@@ -1,0 +1,37 @@
+<html>
+<head></head>
+<style>
+
+img{
+height:500px;
+width:600px;
+border:10px double red;
+
+}
+
+</style>
+<body onload="demo()">
+<center>
+<h1>Image Changer</h1>
+<hr />
+<img src="assets/images/img.jpeg" />
+</center>
+<script>
+var myArr = ["img1.jpeg","img2.jpeg","img3.jpeg","img4.jpeg","img5.jpeg"]
+var i=0
+function slider(){
+var x = document.querySelector("img");
+
+x.src="assets/images/"+myArr[i++];
+
+if(i>myArr.length-1){
+i=0;
+}
+
+}
+var demo=()=>{
+window.setInterval(slider,1000)
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        myCourseArr = [
+            {
+                course:"HTML"
+            },
+
+            {
+                course:"HTML 5"
+            },
+            {
+                course:"CSS"
+            },
+            {
+                course:"CSS 3"
+            },
+            {
+                course:"BOOTSTRAP"
+            },
+            {
+                course:"TAILWIND CSS"
+            },
+            {
+                course:"JAVASCRIPT"
+            },
+            {
+                course:"JQUERY"
+            },
+            {
+                course:"REACT JS"
+            },
+            {
+                course:"HTML"
+            },
+            
+        ];
+
+            arrRes = `<select>
+                    <option selected>Select Your Course</option>
+                `
+        for(var index=0;index < myCourseArr.length; index++){
+            arrRes +=`
+                <option>${myCourseArr[index].course}</option>
+            `
+        }
+
+        arrRes+=`</select>`
+        document.write(arrRes)
+
+
+    </script>
+</body>
+</html>

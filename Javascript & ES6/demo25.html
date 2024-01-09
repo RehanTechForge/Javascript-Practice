@@ -1,0 +1,99 @@
+<html>
+<head></head>
+<style>
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+gap:10px;
+}
+table{
+width:90vw;
+}
+table,th,td{
+border:1px solid black;
+border-collapse: collapse;
+padding: 5px 5px;
+text-align:center;
+}
+th,td{
+width:18vw;
+}
+img{
+width:100px;
+aspect-ratio:1;
+}
+</style>
+<body>
+
+<div>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>Product Name</th>
+<th>Image</th>
+<th>Quantity</th>
+<th>Price</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>01</td>
+<td>Kamez Shawal</td>
+<td><img src="assets/images/suit.jpeg"></td>
+<td>01</td>
+<td>12500</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Kurta Pajama</td>
+<td><img src="assets/images/suit1.jpeg"></td>
+<td>01</td>
+<td>7500</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Baby Kurta Pajama</td>
+<td><img src="assets/images/baby.jpeg"></td>
+<td>01</td>
+<td>2500</td>
+</tr>
+<tr>
+<td>01</td>
+<td>Kamez Shawal</td>
+<td><img src="assets/images/suit.jpeg"></td>
+<td>01</td>
+<td>12500</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Kurta Pajama</td>
+<td><img src="assets/images/suit1.jpeg"></td>
+<td>01</td>
+<td>7500</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Baby Kurta Pajama</td>
+<td><img src="assets/images/baby.jpeg"></td>
+<td>01</td>
+<td>2500</td>
+</tr>
+</tbody>
+
+</table>
+</div>
+
+<button onclick="demo()">Print Invoice</button>
+<script>
+let demo=()=>{
+var obj = document.querySelector("div").innerHTML;
+document.body.innerHTML = obj
+window.print()
+}
+</script>
+</body>
+</html>

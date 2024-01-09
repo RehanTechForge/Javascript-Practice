@@ -1,0 +1,31 @@
+<html>
+<head></head>
+
+<body>
+
+<textarea cols="7" rows="7">
+
+</textarea>
+<button>post</button>
+<script>
+
+var userInp = document.querySelector('textarea');
+var btn = document.querySelector('button');
+
+btn.addEventListener('click', () =>{
+
+var res = userInp.value;
+
+if(res.length <= 50){
+alert('post')
+}else{
+alert('Enter Unnder Given Condition')
+}
+
+
+});
+
+
+</script>
+</body>
+</html>

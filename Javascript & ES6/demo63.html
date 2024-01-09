@@ -1,0 +1,90 @@
+<html>
+<head></head>
+<style>
+h1{
+text-align:center;
+}
+div{
+
+width: 95vw;
+margin:0px auto;
+text-align:center;
+}
+.div > img{
+width:250px;
+height:200px;
+margin:10px 10px;
+cursor:pointer;
+border:10px groove red;
+}
+.main{
+height:100vh;
+width:100vw;
+background:rgba(0,0,0,0.5);
+position:absolute;
+top:0%;
+left:0%;
+display:flex;
+justify-content:center;
+align-items:center;
+display:none;
+visibility:hidden;
+}
+.inner{
+width:50vw;
+height:500px;
+background:white;
+border-radius:10px;
+display:flex;
+}
+span{
+display:block;
+float:right;
+margin:10px 20px;
+font-size:25px;
+cursor:pointer;
+}
+.mimg{
+margin-top:80px;
+height:290px;
+width:470px;
+border:20px double aqua;
+padding:10px;
+}
+</style>
+<body>
+
+<h1>Modal Image Gallery</h1>
+<hr />
+<div class="div">
+<img src="assets/images/img1.jpeg" onclick="demo(this)" />
+<img src="assets/images/img2.jpeg" onclick="demo(this)" />
+<img src="assets/images/img3.jpeg" onclick="demo(this)" />
+<img src="assets/images/img4.jpeg" onclick="demo(this)" />
+<img src="assets/images/img5.jpeg" onclick="demo(this)" />
+<img src="assets/images/img6.jpeg" onclick="demo(this)" />
+<img src="assets/images/img7.jpeg" onclick="demo(this)" />
+<img src="assets/images/img8.jpeg" onclick="demo(this)" />
+</div>
+<div class="main">
+<div class="inner">
+<span onclick="
+document.querySelector('.main').style.display='none';
+document.querySelector('.main').style.visibility='hidden';
+">X</span>
+<img src="assets/images/img.jpeg" class="mimg">
+</div>
+</div>
+<script>
+
+let demo = (val) =>{
+var main = document.querySelector('.main');
+var mimg = document.querySelector('.mimg')
+main.style.display='block';
+main.style.visibility='visible';
+mimg.src = val.src;
+}
+
+</script>
+</body>
+</html>
